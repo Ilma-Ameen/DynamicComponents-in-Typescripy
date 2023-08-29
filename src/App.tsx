@@ -4,6 +4,9 @@ import Button from "./components/button";
 import Input from "./components/input";
 import Table from "./components/table";
 import Select from "./components/select";
+import IconButton from "./components/Iconbutton";
+import Switch from "./components/Switch";
+//import DatePicker from "./components/datepicker";
 
 function App() {
 
@@ -90,6 +93,27 @@ function App() {
             },
           ]}
         />
+      </div>
+      <div className="text-center container mt-3">
+      <div className="border border-4 my-3 p-4">
+        <h2>ICON BUTTON COMPONENT</h2>
+        <IconButton
+          icon="fa-check-circle" label="Click Me"
+          onClick={() => {
+            console.log("Icon button clicked");
+          }}
+        />
+      </div>
+
+      <div className="border border-4 my-3 p-4">
+        <h2>SWITCH COMPONENT</h2>
+        <Switch
+          label="Toggle Switch"
+          onChange={(isChecked: boolean) => {
+            console.log("Switch toggled:", isChecked);
+          }}
+        />
+      </div>
       </div>
     </div>
   );
